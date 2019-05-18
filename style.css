@@ -1,0 +1,96 @@
+body{
+	justify-content: center;
+	display: grid;	
+	grid-template-columns: 50vw minmax(160px,200px);
+}
+header, nav, section, aside, footer{
+	border: 1px solid #36417F;
+}
+header{
+	grid-row: 1;
+	grid-column: 1 / 3;
+	height: 160px;
+	display: flex;
+	justify-content: space-between;
+}
+#headings{
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 50px;
+}
+nav{
+	grid-column: 1 / 3;
+	height: 50px;
+	grid-row: 2;
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: space-around;
+
+}
+nav >.navelements{
+	text-align: center;
+	width: 150px;
+	background-color: #36417F;
+	color: white;
+	font-weight: bold;
+	border-radius: 10px;
+	margin-top: auto;
+	margin-bottom: auto;
+	text-decoration: none;
+}
+a:hover{
+	border: 1px solid blue;
+}
+section{
+	grid-column: 1 / 2;
+	min-height: 50vh;
+	max-width: 50vw;
+	grid-row: 3;
+}
+table{
+	border-collapse: collapse; 
+	width: 90%;
+    margin-left:5%; 
+    margin-right:5%;
+}
+td, th {
+    border: 1px solid #36417F;
+    text-align: center;
+}
+h4{
+	font-style: italic;
+	text-align: center;
+	margin-bottom: 0;
+}
+aside{
+	grid-column: 2 / 3;
+	min-height: 50vh;
+	grid-row: 3;
+}
+h3, p{
+	margin-right: 5px;
+	margin-left: 5px;
+}
+footer{
+	grid-row: 4;
+	grid-column: 1 / 3;
+	height: auto;
+	background-color: #373F7F;
+	display: flex;
+	justify-content: space-around;
+}
+footer > address{
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
+/*extra things for more responsivity*/
+@media only screen and (max-width: 780px){
+	tbody{
+		font-size: 10px;
+	}
+	#headings{
+		font-size: 0.7em;
+	}
+}
